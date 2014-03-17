@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view contentType="text/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Spring Faces: Hotel Booking Sample Application</title>
+	<link rel="stylesheet" href="${request.contextPath}/styles/blueprint/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="${request.contextPath}/styles/blueprint/print.css" type="text/css" media="print" />
+	<!--[if lt IE 8]>
+		<link rel="stylesheet" href="${request.contextPath}/styles/blueprint/ie.css" type="text/css" media="screen, projection" />
+	<![endif]-->
+	<link rel="stylesheet" href="${request.contextPath}/styles/le-frog/jquery-ui-1.8.2.custom.css" type="text/css" media="screen" />
+	<!-- <ui:insert name="headIncludes"/> -->
+	<style>
+	<!--
+		div.ui-datatable > table {
+			margin-bottom: 0;
+		}
+	-->
+	</style>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid border="0" columns="2">
+			<h:outputText value="#{msg['form.firstname.label']}:"/>
+			<h:inputText id="firstname" value="#{user.firstname}"/>
+			<h:outputText value="#{msg['form.lastname.label']}:"/>
+			<h:inputText id="lastname" value="#{user.lastname}"/>
+			<h:outputText value="#{msg['form.email.label']}:"/>
+			<h:inputText id="email" value="#{user.email}"/>
+		</h:panelGrid>
+		<h:commandButton id="submit" action="submit" value="#{msg['button.submit.label']}"/>
+	</h:form>
+</h:body>
+</f:view>
+</html>
